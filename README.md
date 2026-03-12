@@ -9,16 +9,17 @@
 
 
 
-A Multifunction IoT Rover designed for remote exploration, obstacle detection, and live video monitoring.
-This rover integrates Arduino Uno, ESP32-CAM, Bluetooth communication, ultrasonic sensors, and solar power to create a compact smart robotic system.
 
-The project demonstrates the integration of robotics, embedded systems, and Internet of Things (IoT) technologies.
+
+📊 GitHub Project Statistics
 
 📖 Table of Contents
 
+Abstract
+
 Project Overview
 
-System Features
+Key Features
 
 Hardware Components
 
@@ -28,97 +29,103 @@ Hardware Connections
 
 ESP32-CAM Video Streaming
 
-Software Requirements
+Project Images
 
-Project Structure
+Live Demo
 
-Installation & Setup
+Installation
 
 Working Principle
 
-Future Improvements
+Future Scope
+
+Research Contribution
+
+Project Structure
 
 Team Members
 
+🧠 Abstract
+
+Rovers play an important role in remote exploration, surveillance, and scientific analysis.
+This project presents a Multifunction IoT Rover capable of performing multiple robotic tasks including:
+
+Remote navigation
+
+Obstacle detection
+
+Voice command control
+
+Real-time video monitoring
+
+The rover integrates Arduino Uno for motion control and ESP32-CAM for wireless video streaming. A solar-powered charging system improves energy efficiency and sustainability.
+
+This project demonstrates the integration of embedded systems, robotics, and IoT communication technologies to build an intelligent robotic platform.
+
 🚀 Project Overview
 
-The Multifunction Rover is a four-wheel robotic vehicle that can be controlled through Bluetooth commands or voice commands via mobile application.
+The Multifunction Rover is a four-wheel robotic vehicle designed for wireless control and autonomous navigation.
 
-The rover also performs automatic obstacle avoidance and provides real-time live video streaming using ESP32-CAM.
+The rover can be operated through:
 
-Key capabilities include:
+📱 Bluetooth Mobile Application
+🎤 Voice Commands
+🤖 Autonomous Obstacle Avoidance Mode
 
-• Remote rover control
-• Autonomous obstacle detection
-• Wireless video streaming
-• Voice command navigation
-• Solar powered charging system
+Additionally, the ESP32-CAM module provides live video streaming through WiFi, enabling remote monitoring.
 
-This system can be used in:
+Applications
 
-Surveillance robots
+Security surveillance robots
 
-Disaster monitoring
+Disaster response robots
 
-Remote exploration
+Military reconnaissance
 
-Educational robotics projects
+Educational robotics research
 
-⭐ System Features
-Remote Control
+⭐ Key Features
 
-Control rover movement using Bluetooth mobile application.
-
-Voice Command Control
-
-The rover can receive voice instructions from mobile apps.
-
-Obstacle Avoidance
-
-An ultrasonic sensor and servo motor detect obstacles and guide the rover safely.
-
-Live Video Streaming
-
-The ESP32-CAM module streams real-time video over WiFi.
-
-Solar Charging
-
-A 6V solar panel and TP4056 module recharge the battery.
+✅ Bluetooth Controlled Rover
+✅ Voice Command Navigation
+✅ Real-time Video Streaming (ESP32-CAM)
+✅ Obstacle Detection and Avoidance
+✅ Servo-based scanning system
+✅ Autonomous navigation
+✅ Solar-powered charging system
 
 🧰 Hardware Components
 Component	Description
 Arduino Uno R3	Main microcontroller
-ESP32-CAM	Live video camera module
+ESP32-CAM	Wireless video camera
 L298N Motor Driver	Controls DC motors
 Ultrasonic Sensor (HC-SR04)	Detects obstacles
 Servo Motor	Rotates ultrasonic sensor
 HC-06 Bluetooth Module	Wireless communication
-Solar Panel (6V)	Power generation
-TP4056 Charging Module	Battery charging
+Solar Panel (6V)	Generates power
+TP4056 Charging Module	Battery charging module
 18650 Li-ion Battery	Power supply
-LED & Resistors	Status indication
-Robot Chassis	Frame with motors
-Jumper Wires	Electrical connections
-🏗 System Architecture
-            Mobile App
-        (Bluetooth Control)
-                 │
-                 ▼
-          HC-06 Bluetooth
-                 │
-                 ▼
-            Arduino Uno
-                 │
-        ┌────────┴────────┐
-        ▼                 ▼
-   Motor Driver      Ultrasonic Sensor
-      (L298N)             │
-        │                 ▼
-        ▼             Servo Motor
-     DC Motors            │
-        │                 ▼
-        └──── Rover Navigation ────┘
-Video Streaming System
+LED & Resistors	Status indicators
+Robot Chassis	Mechanical body
+🛰 System Architecture
+Mobile App / Voice Commands
+            │
+            ▼
+       Bluetooth (HC-06)
+            │
+            ▼
+        Arduino Uno
+            │
+   ┌────────┴────────┐
+   ▼                 ▼
+Motor Driver      Ultrasonic Sensor
+ (L298N)               │
+   │                   ▼
+   ▼               Servo Motor
+DC Motors               │
+   │                    ▼
+ Rover Movement     Obstacle Detection
+Camera Streaming Architecture
 ESP32-CAM
    │
    ▼
@@ -128,9 +135,9 @@ WiFi Network
 Mobile / Laptop Browser
    │
    ▼
-Live Camera Stream
+Live Video Streaming
 🔌 Hardware Connections
-L298N Motor Driver
+Motor Driver (L298N)
 L298N	Arduino
 ENA	10
 IN1	9
@@ -157,94 +164,111 @@ VCC	5V
 GND	GND
 📷 ESP32-CAM Programming Connections
 
-To upload code to the ESP32-CAM, connect it with an FTDI programmer.
+To upload code to ESP32-CAM, use an FTDI programmer.
 
 ESP32-CAM	FTDI
 5V	VCC
 GND	GND
 U0R	TX
 U0T	RX
-IO0	GND (for upload mode)
+IO0	GND (Upload Mode)
 
 After uploading code:
 
-Disconnect IO0 from GND
+1️⃣ Disconnect IO0 from GND
+2️⃣ Press RESET
+3️⃣ Open browser with ESP32 IP address
 
-Press RESET
+📸 Project Images
 
-The camera will start streaming.
+Add rover images to the Images folder.
 
+Rover Model
+![Rover Image](Images/rover_model.jpg)
+Circuit Diagram
+![Circuit Diagram](Images/circuit_diagram.png)
+🎥 Live Demo
+
+Add your YouTube project demo.
+
+https://youtu.be/YOUR_VIDEO_LINK
+
+Embed preview:
+
+[![Watch Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
 💻 Software Requirements
 
 Arduino IDE
 
 ESP32 Board Package
 
-USB Drivers
-
 Android Bluetooth Controller App
 
-Serial Monitor  
+FTDI Programmer
 
+USB Drivers
 
-⚙️ Installation & Setup
-1 Install Arduino IDE
+⚙ Installation & Setup
+Step 1
 
-Download and install Arduino IDE.
+Install Arduino IDE
 
-2 Upload Arduino Code
+Step 2
 
-Upload the rover control program to Arduino Uno.
+Upload rover control code to Arduino Uno
 
-3 Upload ESP32-CAM Code
+Step 3
 
-Upload camera streaming code using FTDI programmer.
+Upload ESP32-CAM streaming code
 
-4 Power the Rover
+Step 4
 
-Insert 18650 Li-ion battery and switch ON.
+Insert 18650 battery
 
-5 Connect Bluetooth
+Step 5
 
-Pair mobile with HC-06 module.
+Connect mobile with HC-06 Bluetooth
 
-6 Open Mobile App
+Step 6
 
-Control rover using buttons or voice commands.
-
-7 Open Camera Stream
-
-Open browser and enter:
+Open camera stream in browser
 
 http://ESP32_IP_ADDRESS
 ⚡ Working Principle
 
-Mobile app sends commands via Bluetooth
+1️⃣ User sends command through mobile app
+2️⃣ Bluetooth module receives command
+3️⃣ Arduino processes instructions
+4️⃣ Motor driver controls rover motors
+5️⃣ Ultrasonic sensor scans environment
+6️⃣ Servo motor rotates sensor to detect obstacles
+7️⃣ Rover changes direction automatically
+8️⃣ ESP32-CAM streams live video through WiFi
 
-Arduino receives commands through HC-06 module
+🔮 Future Scope
 
-Motor driver controls rover movement
-
-Ultrasonic sensor detects obstacles
-
-Servo motor scans left and right directions
-
-Rover avoids obstacles automatically
-
-ESP32-CAM streams real-time video via WiFi
-
-Solar panel charges the battery
-
-🔮 Future Improvements
+AI object detection using computer vision
 
 GPS navigation system
 
-AI object detection
-
-Night vision camera
-
 Autonomous path planning
 
-Cloud IoT monitoring
+Cloud-based IoT monitoring
 
-Mobile app integration with video feed
+Night vision camera integration
+
+Mobile app with integrated video streaming
+
+🧠 Research Contribution
+
+This project demonstrates the integration of IoT communication with embedded robotics systems.
+
+The rover design improves:
+
+Energy efficiency
+
+Remote monitoring capability
+
+Navigation safety
+
+The platform can be extended for autonomous robotic exploration and surveillance applications.
