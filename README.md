@@ -59,31 +59,33 @@ Educational robotics projects
 
 ------------------------------------------
 
-🛰 System Architecture
+## 🛰 System Architecture
 
+```
 Mobile App / Voice Commands
-           │
-           ▼
-      Bluetooth (HC-06)
-           │
-           ▼
-        Arduino Uno
-           │
-   ┌───────┴────────┐
-   ▼                ▼
-Motor Driver     Ultrasonic Sensor
-  (L298N)            │
-   │                 ▼
-   ▼             Servo Motor
+        │
+        ▼
+   Bluetooth (HC-06)
+        │
+        ▼
+     Arduino Uno
+        │
+  ┌─────┴─────────┐
+  ▼               ▼
+Motor Driver   Ultrasonic Sensor
+ (L298N)            │
+  │                 ▼
+  ▼             Servo Motor
 DC Motors            │
-   │                 ▼
- Rover Movement  Obstacle Detection
-
+  │                  ▼
+Rover Movement   Obstacle Detection
+```
 ------------------------------------------
 
- 📷 Camera Streaming Architecture
+ ## 📷 Camera Streaming Architecture
 
- ESP32-CAM
+```
+ESP32-CAM
    │
    ▼
 WiFi Network
@@ -93,6 +95,7 @@ Mobile / Laptop Browser
    │
    ▼
 Live Video Streaming
+```
 
 ------------------------------------------
 
